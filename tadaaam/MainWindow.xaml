@@ -1,0 +1,44 @@
+﻿<Window x:Class="tadaaam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tadaaam"
+        mc:Ignorable="d"
+        Title="League of Noobs" Height="400" Width="450">
+    <Grid>
+        <Menu>
+            <Button 
+                x:Name="btn_add" 
+                Click="btn_add_Click" 
+                Content="Добавить"/>
+            <Button 
+                x:Name="btn_openDialog" Click="btn_openDialog_Click"
+                Content="Открыть"/>
+            
+        </Menu>
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0, 25, 0, 0">
+            <DataGrid x:Name="d_grid"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="True"
+                  Height="400" Background="Beige">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="dg_champ" Header="Чемпион" Binding="{Binding Name}"/>
+                    <DataGridTextColumn x:Name="dg_champclass" Header="Класс" Binding="{Binding Class}"/>
+                    <DataGridTextColumn x:Name="dg_champpos" Header="Линия" Binding="{Binding Position}"/>
+                </DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button x:Name="btn_del" 
+                                    Click="btn_del_Click"
+                                Content="Удалить"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>

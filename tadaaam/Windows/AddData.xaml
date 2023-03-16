@@ -1,0 +1,44 @@
+﻿<Window x:Class="tadaaam.Windows.AddData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tadaaam.Windows"
+        mc:Ignorable="d"
+        Title="AddData" Height="450" Width="650"
+        MinHeight="450" MinWidth="650"
+        MaxHeight="450" MaxWidth="650">
+    <Grid Background="Beige">
+        <TextBox 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="45,65,0,0" TextWrapping="Wrap" 
+            x:Name="tb_name"
+            Text="Чемпион" FontSize="20px"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Width="250" Height="65"/>
+        <TextBox 
+            HorizontalAlignment="Left" VerticalAlignment="Center" 
+            Margin="45,0,0,0" TextWrapping="Wrap" 
+            Text="Класс" FontSize="20px"
+            x:Name="tb_class"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Width="250" Height="65"/>
+        <TextBox 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="45,300,0,0" TextWrapping="Wrap" 
+            Text="Линия" FontSize="20px" 
+            x:Name="tb_position"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Width="250" Height="65"/>
+        <Button 
+            Content="Добавить" x:Name="btn_addData" Background="White"
+            Click="btn_addData_Click"
+            HorizontalAlignment="Left" Margin="400,152,0,0" VerticalAlignment="Top" 
+            Height="55" Width="200"/>
+        <Button 
+            Content="Сохранить" x:Name="btn_saveData" Background="White"
+            Click="btn_saveData_Click"
+            HorizontalAlignment="Left" Margin="400,268,0,0" VerticalAlignment="Top" 
+            Height="55" Width="200"/>
+    </Grid>
+</Window>
